@@ -1,2 +1,2 @@
 # HTMLClownPage
-Trying to work through HTML5 development
+Trying to work through HTML5 (game) development
