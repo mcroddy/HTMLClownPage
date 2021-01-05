@@ -1,0 +1,59 @@
+<canvas id="ctx" width="1900" height="500" style="border:1px solid #000000;"></canvas>
+<head>
+<script type="text/javascript">
+  var ctx = document.getElementById("ctx").getContext("2d");
+
+   //1. Modify Settings =
+  ctx.font = '30px Comic Sans MS';   //pick font
+  ctx.fillStyle = 'red';     //color and form
+  ctx.globalAlpha = 0.5;      //transparency 0= invisible, 1  = visible
+
+  var x = 50;
+  var spdX = 50;
+  var y = 40;
+  var spdY = 50;
+  ctx.fillText(':o)',x,y);
+  
+ 
+  //2. Draw something
+  ctx.fillRect(50,50,100,100);    //draw rectangle
+  //ctx.clearRect(75,75,100,100);       //clear canvas
+  
+  setInterval(update,500);
+  
+  
+  function update() {
+	x += spdX;
+	y += spdY;
+	ctx.fillText(':o)',x,y);
+	
+	if(y > 500)
+	{
+		console.log('Out of bounds');
+		y = 0;
+	}
+  }
+  
+  function insert(){
+      var src = document.getElementById("gamediv");
+        var img = document.createElement("img");
+        img.src = "https://pbs.twimg.com/media/Eq9bhaCUcAAhkN9?format=jpg&name=small";
+            src.appendChild(img);
+        }
+  
+  update();
+  update();
+    
+
+  
+</script>
+</head>
+
+ <body>
+     <div id="gamediv">
+         <script type="text/javascript">
+             insert();
+         </script>
+     </div>
+ </body>
+
