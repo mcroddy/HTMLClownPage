@@ -1,0 +1,16 @@
+<canvas id="ctx" width="1000" height="500" style="border:1px solid #000000;"></canvas>
+
+<script>
+  var ctx = document.getElementById("ctx").getContext("2d");
+  
+  //1. Modify Settings =
+  ctx.font = '30px Comic Sans MS';   //pick font
+  ctx.fillStyle = 'red';     //color and form
+  ctx.globalAlpha = 0.5;      //transparency 0= invisible, 1  = visible
+  
+  //2. Draw something
+  ctx.fillText('Hello. This is web development. :o)',50,50);
+  ctx.fillRect(50,50,100,100);    //draw rectangle
+  ctx.clearRect(75,75,100,100);       //clear canvas
+  
+</script>
